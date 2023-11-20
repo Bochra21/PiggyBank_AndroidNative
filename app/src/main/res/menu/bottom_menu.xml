@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home_icon"
+            android:title="Home"
+            android:orderInCategory="2"
+            />
+
+        <item
+            android:id="@+id/categories"
+            android:icon="@drawable/yellow_icon__list"
+            android:title="Categories"
+            android:orderInCategory="3"
+            />
+
+
+        <item android:id="@+id/statistics"
+            android:icon="@drawable/pie_chart"
+            android:title="Statistics"
+            android:orderInCategory="1"
+            />
+
+
+    </group>
+
+
+</menu>

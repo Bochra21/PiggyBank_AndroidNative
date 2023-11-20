@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/icon__home"
+            android:title="Home"
+            android:orderInCategory="1"
+            />
+
+        <item
+            android:id="@+id/categories"
+            android:icon="@drawable/icon__list"
+            android:title="Categories"
+            android:orderInCategory="2"
+            />
+
+        <item android:id="@+id/statistics"
+            android:icon="@drawable/icon_pie_chart"
+            android:title="Statistics"
+            android:orderInCategory="3"
+            />
+
+        <item android:id="@+id/settings"
+            android:icon="@drawable/icon__settings"
+            android:title="Settings"
+            android:orderInCategory="4"
+            />
+
+        <item android:id="@+id/contact"
+            android:icon="@drawable/icon__envelope"
+            android:title="Contact"
+            android:orderInCategory="6"
+            />
+
+        <item android:id="@+id/notifications"
+            android:icon="@drawable/icon__bell"
+            android:title="Notifications"
+            android:orderInCategory="5"
+            />
+        <item android:id="@+id/logout"
+            android:icon="@drawable/icon__logout"
+            android:title="Logout"
+            android:orderInCategory="7"
+            />
+
+    </group>
+
+
+</menu>

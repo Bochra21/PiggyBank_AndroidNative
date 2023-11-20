@@ -4,4 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="old_rose">#BB8588</color>
     <color name="feldgrau_green">#4B6858</color>
+    <color name="yellow"> #FCF0CC</color>
+    <color name="unselected_icon_color"> #FCF0CC</color>
+    <color name="selected_icon_color">#4B6858</color>
+
+
 </resources>
