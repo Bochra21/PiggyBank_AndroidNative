@@ -50,6 +50,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
            if( item.getItemId()== R.id.home) {
                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+
            }
             else if( item.getItemId()== R.id.categories) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CategoriesFragment()).commit();
@@ -74,6 +75,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_home);
 
         toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(" ");
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -93,6 +95,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+
                 int itemId = item.getItemId();
                 if (item.getItemId() == R.id.home) {
                     openFragment(new HomeFragment());

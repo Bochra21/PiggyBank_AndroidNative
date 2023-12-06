@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".anotherActivity">
+
+
+
+
+
+    <ImageView
+        android:id="@+id/calen"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/icon_calender"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <ImageView
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar"
+        app:srcCompat="@drawable/add_button"
+        android:gravity="center_horizontal"/>
+
+
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    <View
+        android:id="@+id/you_saved"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#FCF0CC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+
+
+
+    </View>
+
+    <TextView
+        android:id="@+id/you_saved_txt"
+        android:layout_width="102dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="You Saved"
+        android:textAlignment="center"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/monthly_saved_txt"
+        android:layout_width="102dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="amount"
+        android:textAlignment="center"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="168dp"
+        android:layout_height="36dp"
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="228dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="October 2023"
+        android:textAlignment="center"
+        android:textColor="@color/dark_brown"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:translationZ="10dp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/add_btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/salary"
+        android:layout_width="102dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="200dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+
+        android:text="Salary"
+
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/feldgrau_green"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:translationZ="10dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/salary_value"
+        android:layout_width="96dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="amount"
+        android:textColor="@color/selected_icon_color"
+        android:textSize="16sp"
+        android:translationZ="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,13 +20,18 @@
             android:layout_height="56dp"
             android:id="@+id/toolbar"
             android:elevation="4dp"
-            android:background="@color/white"
+            android:background="@color/old_rose"
+            app:titleTextAppearance="@style/MyToolbarTitleStyle"
+
        />
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fragment_container"/>
+            android:layout_below="@id/toolbar"
+
+            android:id="@+id/fragment_container"
+            />
 
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -38,7 +43,7 @@
             <FrameLayout
                 android:id="@+id/frame_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="651dp" />
 
             <com.google.android.material.bottomappbar.BottomAppBar
                 android:id="@+id/bottomAppBar"
@@ -77,7 +82,7 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
         app:menu="@menu/main_menu"
-        app:itemIconTint="@color/feldgrau_green"
+        app:itemIconTint="@color/old_rose"
        />
 
 </androidx.drawerlayout.widget.DrawerLayout>

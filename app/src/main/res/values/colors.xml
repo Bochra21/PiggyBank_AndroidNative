@@ -3,8 +3,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="old_rose">#BB8588</color>
+    <color name="dark_brown">#4D4730</color>
     <color name="feldgrau_green">#4B6858</color>
     <color name="yellow"> #FCF0CC</color>
+    <color name="light_blue">#EEEEEF</color>
+    <color name="very_light_blue">#F5F5F5</color>
     <color name="unselected_icon_color"> #FCF0CC</color>
     <color name="selected_icon_color">#4B6858</color>
 
