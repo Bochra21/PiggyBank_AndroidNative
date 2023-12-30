@@ -27,7 +27,7 @@
             android:layout_width="201dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="112dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="56dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
@@ -47,7 +47,7 @@
             app:layout_constraintVertical_bias="0.251" />
 
         <TextView
-            android:id="@+id/amount"
+            android:id="@+id/amounttxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="112dp"
@@ -71,36 +71,41 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/expense_name_txt" />
 
-        <EditText
-            android:id="@+id/editTextText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="112dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:inputType="text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/amount" />
-
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/add_btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="148dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
             android:src="@drawable/add_expense_button"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+            app:layout_constraintTop_toBottomOf="@+id/amount"
+            app:layout_constraintVertical_bias="0.18" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/cancel_btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="144dp"
             android:layout_marginTop="12dp"
             android:src="@drawable/cancel_expense_button"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+            app:layout_constraintTop_toBottomOf="@+id/add_btn2"
+            app:layout_constraintVertical_bias="0.023"
+            android:clickable="true"/>
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amounttxt" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     
 
