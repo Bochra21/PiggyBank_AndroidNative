@@ -193,14 +193,12 @@
 
         <ListView
             android:id="@+id/expenses_list"
-            android:layout_width="368dp"
-            android:layout_height="289dp"
+            android:layout_width="369dp"
+            android:layout_height="340dp"
             android:layout_marginStart="1dp"
-            android:layout_marginTop="70dp"
             android:layout_marginEnd="1dp"
             android:divider="@color/very_light_blue"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.461"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bar" />
 
@@ -227,18 +225,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <SearchView
-            android:id="@+id/search"
-            android:layout_width="229dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.149"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

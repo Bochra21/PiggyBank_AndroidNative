@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment {
                 try {
                     FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment_container, expensesFragment);
+                    fragmentTransaction.replace(R.id.fragment_container, expensesFragment, "fragment_expenses");
                     fragmentTransaction.addToBackStack(null); // Optional, for back navigation
                     fragmentTransaction.commit();
                 } catch (Exception e) {
