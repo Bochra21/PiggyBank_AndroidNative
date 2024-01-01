@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -14,12 +15,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class AmountSpentFragment extends Fragment {
 
 
     EditText spentAmount;
     ImageView addBtn, cancelBtn;
+     List<ExpenseModel> expensesList = new ArrayList<>();
 
     public AmountSpentFragment() {
         // Required empty public constructor
@@ -42,7 +47,73 @@ public class AmountSpentFragment extends Fragment {
         }
     }
 
-    @Override
+
+
+
+
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_amount_spent, container, false);
+
+        spentAmount = view.findViewById(R.id.amount);
+        addBtn = view.findViewById(R.id.add_btn2);
+        cancelBtn = view.findViewById(R.id.cancel_btn2);
+
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String spentAmountString = spentAmount.getText().toString();
+
+                Log.d("spentAmountFragment", "onClick: spentAmountString = " + spentAmountString);
+
+                // Validate if fields are empty
+                if (TextUtils.isEmpty(spentAmountString)) {
+                    Toast.makeText(getContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                } else {
+                    Log.d("spentAmountFragment", "onClick: Inside else block");
+
+                    // Retrieve clicked position from arguments
+                    Bundle bundle = getArguments();
+                    if (bundle != null) {
+                        int clickedPosition = bundle.getInt("clicked_position", -1);
+
+                        // Ensure position is valid and update spent amount
+                        if (clickedPosition >= 0 && clickedPosition < expensesList.size()) {
+                            ExpensesFragment expensesFragment = (ExpensesFragment) requireActivity()
+                                    .getSupportFragmentManager().findFragmentByTag("fragment_expenses");
+
+                            if (expensesFragment != null) {
+                                Log.d("spentAmountFragment", "onClick: Found ExpensesFragment");
+                                expensesFragment.updateSpentAmount(spentAmountString, clickedPosition);
+                            } else {
+                                Log.d("spentAmountFragment", "onClick: ExpensesFragment is null");
+                            }
+
+                            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                            fragmentTransaction.replace(R.id.fragment_container, new ExpensesFragment(), "fragment_expenses");
+                            fragmentTransaction.addToBackStack("fragment_expenses"); // Add to back stack
+                            fragmentTransaction.commit();
+
+                        }
+                    }
+                }
+            }
+        });
+
+        return view;
+    }
+
+
+
+
+
+
+ /*   @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
@@ -77,7 +148,7 @@ public class AmountSpentFragment extends Fragment {
                     if (expensesFragment != null)
                     {
                         Log.d("spentAmountFragment", "onClick: Found spentAmountFragment");
-                        expensesFragment.updateSpentAmount(spentAmountString);
+                        expensesFragment.updateSpentAmount(spentAmountString, clickedPosition);
 
                     }
                     else
@@ -104,5 +175,5 @@ public class AmountSpentFragment extends Fragment {
 
 
         return view;
-    }
+    }*/
 }

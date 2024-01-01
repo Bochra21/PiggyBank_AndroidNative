@@ -81,10 +81,9 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-         android:layout_marginTop="140dp"
-        android:divider="@color/very_light_blue"
-      >
+        android:layout_height="529dp"
+        android:layout_marginTop="140dp"
+        android:divider="@color/very_light_blue">
 
     </ListView>
 </FrameLayout>

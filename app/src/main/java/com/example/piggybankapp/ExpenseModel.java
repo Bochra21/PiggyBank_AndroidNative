@@ -17,6 +17,11 @@ public class ExpenseModel {
 
     }
 
+    public ExpenseModel(String expenseName, String amount,String spentAmount) {
+        this.expenseName = expenseName;
+        this.amount = amount;
+        this.spentAmount = spentAmount;
+    }
     public String getExpenseName() {
         return expenseName;
     }

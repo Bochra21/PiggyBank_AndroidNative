@@ -11,25 +11,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+        <!-- Auto layout, variables, and unit scale are not yet supported -->
+
         <View
             android:id="@+id/bar"
-            android:layout_width="0dp"
-            android:layout_height="136dp"
+            android:layout_width="405dp"
+            android:layout_height="147dp"
 
             android:background="@drawable/shape"
             android:elevation="10dp"
 
             app:layout_constraintEnd_toEndOf="parent"
 
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
 
         </View>
-
-
-        <!-- Auto layout, variables, and unit scale are not yet supported -->
 
         <ImageView
             android:id="@+id/calen"
@@ -151,11 +151,10 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
 
-            android:layout_marginStart="144dp"
+            android:layout_marginStart="104dp"
 
             android:layout_marginTop="16dp"
 
-            android:layout_marginEnd="5dp"
             android:fontFamily="serif"
             android:gravity="center"
             android:text="Salary"
@@ -167,29 +166,9 @@
             android:translationZ="10dp"
             android:typeface="serif"
             app:layout_constraintBottom_toBottomOf="@+id/bar"
-            app:layout_constraintEnd_toStartOf="@+id/salary_value"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/date"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/salary_value"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="144dp"
-            android:fontFamily="serif"
-            android:gravity="center"
-            android:text="amount"
-            android:textColor="@color/selected_icon_color"
-            android:textSize="16sp"
-            android:translationZ="10dp"
-            app:layout_constraintBottom_toBottomOf="@+id/bar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.818"
-            app:layout_constraintStart_toEndOf="@+id/salary"
-            app:layout_constraintTop_toBottomOf="@+id/date"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.357" />
 
         <ListView
             android:id="@+id/expenses_list"
@@ -202,29 +181,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bar" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="175dp"
-            android:layout_marginTop="37dp"
-            android:layout_marginEnd="178dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/add_btn" />
 
-        <TextView
-            android:id="@+id/textView3"
+        <EditText
+            android:id="@+id/editTextText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="175dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="178dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textAlignment="viewStart"
+            android:textColor="@color/feldgrau_green"
+            android:textSize="16sp"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/expenses_list"
+            app:layout_constraintEnd_toEndOf="@+id/bar"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/salary"
+            app:layout_constraintTop_toBottomOf="@+id/date"
+            app:layout_constraintVertical_bias="0.2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
